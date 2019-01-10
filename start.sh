@@ -1,11 +1,11 @@
 #!/bin/bash
-cp ./index.php /var/www/html/;
-cp ./main.py /var/www/html/;
-> /var/www/html/stats.txt;
 python /var/www/html/main.py & 
 iptables --flush;
-sudo yum install -y httpd php --skip-broken;
-sudo service httpd start;
-sudo chkconfig httpd on;
-sudo service httpd restart;
-
+rpm -Uvh http://mirror.webtatic.com/yum/el6/latest.rpm
+yum remove -y php-common  
+yum install -y php56w
+yum install -y php56w-mysql
+yum install -y php56w-common
+yum install -y php56w-pdo
+yum install -y php56w-opcache
+php -S 0.0.0.0;8080 &

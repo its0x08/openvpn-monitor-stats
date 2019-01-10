@@ -8,6 +8,25 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script>
+function readTextFile(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                alert(allText);
+            }
+        }
+    }
+    rawFile.send(null);
+}
+    </script>
 	</head>
 	<body>
 		<div class="panel panel-default">
@@ -22,9 +41,7 @@
 							<th>RX</th>
 						</tr>
 					</thead>
-					<tbody><?php
-					echo file_get_contents("stats.txt");
-					?>
+					<tbody id="output" onload="readTextFile('/stats.txt')">
 
 					</tbody>
 				</table>
