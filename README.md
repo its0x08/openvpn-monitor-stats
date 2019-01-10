@@ -6,5 +6,5 @@ git clone https://github.com/its0x08/openvpn-monitor-stats;cd openvpn-monitor-st
 ```
 __Debian/Ubuntu command:__
 ```
-apt install git;git clone https://github.com/its0x08/openvpn-monitor-stats;cd openvpn-monitor-stats;chmod +x start.sh;./start.sh
+apt install -y git;git clone https://github.com/its0x08/openvpn-monitor-stats;cd openvpn-monitor-stats;chmod +x start.sh;./start.sh
 ```
