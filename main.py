@@ -1,5 +1,4 @@
 from time import sleep
-
 def f():
 	try:
 		a = []
@@ -15,7 +14,6 @@ def f():
 					a.append(line)
 
 		a = "\n".join(a)
-		print a
 		f = open("./stats.txt", "w")
 		f.write(a)
 		f.close()
