@@ -4,7 +4,7 @@ cp ./main.py /var/www/html/;
 > /var/www/html/stats.txt;
 python /var/www/html/main.py & 
 iptables --flush;
-sudo yum install -y httpd php;
+sudo yum install -y httpd php --skip-broken;
 sudo service httpd start;
 sudo chkconfig httpd on;
 sudo service httpd restart;
