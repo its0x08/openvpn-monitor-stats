@@ -1,0 +1,1 @@
+@reboot cd /root/Desktop/scripts/openvpn-monitor-stats;bash ubuntu.sh

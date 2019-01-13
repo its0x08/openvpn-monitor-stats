@@ -1,5 +1,6 @@
 #!/bin/bash
 echo CentOS/RedHat;
+cd .
 python main.py &
 iptables --flush;
 rpm -Uvh http://mirror.webtatic.com/yum/el6/latest.rpm;
