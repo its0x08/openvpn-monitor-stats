@@ -4,7 +4,7 @@ def f():
 		a = []
 		b = ['OpenVPN CLIENT LIST', 'Updated,Wed Jan  9 01:31:16 2019', 'Common Name,Real Address,Bytes Received,Bytes Sent,Connected Since', 'ROUTING TABLE', 'Virtual Address,Common Name,Real Address,Last Ref', 'GLOBAL STATS', 'Max bcast/mcast queue length,0', 'END']
 		
-		for line in open("/etc/openvpn/openvpn-status.log", "r"):
+		for line in open("/etc/openvpn/log.log", "r"):
 		#for line in open("./stat.log", "r"):
 			line = line.strip()
 			if line not in b:
